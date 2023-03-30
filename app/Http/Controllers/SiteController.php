@@ -6,17 +6,20 @@ use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
-    
     // método principal
     public function index(){
-        echo "Principal";
+        return view('site.default'); // retorna view dentro do diretório site
     }
 
     public function contact(){
-        echo "Contato";
+        return view('site.contact');
     }
 
     public function about(){
-        echo "Sobre";
+        return view('site.about');
+    }
+
+    public function login(){
+        echo "Login";
     }
 }

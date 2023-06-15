@@ -45,16 +45,8 @@ Route::get('/contact_exp/{name}/{category_id}', function (string $name, string $
     echo "Rota com parametros: $name - $category_id";
 })->where('category_id', '[0-9]+')->where('name', '[A-Za-z]+');
 
-// redirecionando rotas
-Route::get('/route1', function () {
-    echo 'Rota 1';
-})->name('site.route1');
-
-// Route::redirect('/route1', '/route2');
-
-Route::get('/route2', function () {
-    return redirect()->route('site.route1');
-})->name('site.route2');
+// testando encaminhamento de parametros para controlador
+Route::get('/test/{p1}/{p2}', 'TestController@test')->name('site.test');
 
 // rota de contingência
 Route::fallback(function () {

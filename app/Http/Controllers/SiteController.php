@@ -14,7 +14,7 @@ class SiteController extends Controller
 
     public function contact()
     {
-        var_dump($_GET);
+        var_dump($_POST);
         return view('site.contact', ['title' => 'Contact']); // enviando variável do controllador para view 
     }
 

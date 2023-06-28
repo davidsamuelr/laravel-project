@@ -20,6 +20,7 @@ Route::get('/', function () {
 # rota executa controlador@ação
 Route::get('/default', 'SiteController@index')->name('site.default');
 Route::get('/contact', 'SiteController@contact')->name('site.contact');
+Route::post('/contact', 'SiteController@contact')->name('site.contact'); /* utilizando o método post */
 Route::get('/about', 'SiteController@about')->name('site.about');
 Route::get('/login', 'SiteController@login')->name('site.login');
 
